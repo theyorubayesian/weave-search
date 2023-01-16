@@ -1,0 +1,3 @@
+"docarray[weaviate]==0.20.1"
+jina==3.13.2
+sentence-transformers==2.2.2

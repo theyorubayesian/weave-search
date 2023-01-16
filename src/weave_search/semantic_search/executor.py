@@ -41,11 +41,12 @@ class SemanticSearchExecutor(Executor):
     def add_documents(self, docs: DocumentArray, **kwargs):
         self._encode_documents(docs)
         self.all_docs.extend(docs)
+        return DocumentArray([Document(text=f"{len(docs)} added to database")])
     
     @requests(on="/add_documents_from_terms")
     def add_documents_from_terms(self, docs: DocumentArray, **kwargs):
         all_docs = self.get_documents_from_terms(docs.texts)
-        self.add_documents(all_docs)
+        return self.add_documents(all_docs)
     
     @requests(on="/find_documents")
     def find_documents(self, docs: DocumentArray, **kwargs):
