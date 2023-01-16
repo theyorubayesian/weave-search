@@ -1,0 +1,23 @@
+jtype: SemanticSearchExecutor
+with:
+  model_name: gsarti/biobert-nli
+  data_categories:
+    - "Protein"
+    - "Pathway"
+    - "Reaction"
+    - "Complex"
+  subcategories:
+    - "pathologies"
+    - "nonpathologies"
+  weaviate_config:
+    name: Weaver
+    host: localhost
+    port: 8080
+  search_config:
+    min_certainity: 0.95
+py_modules:
+  - semantic_search/__init__.py
+metas:
+  name: Indexer
+  description: Indexes all documents
+  keywords: ['indexer', 'executor']
