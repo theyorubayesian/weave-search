@@ -1,6 +1,6 @@
 # Weave-Search
 
-This is a minimal implementation of a semantic search engine built on biomedical data from [Reactome](https://reactome.org/). It uses [jina.ai](https://jina.ai/) for MLOps & [Weaviate] as its vector search engine.  You can find a basic exploration of the biomedical data in [explore.ipynb](notebooks/explore.ipynb). Each document is embedded using a Sentence Transformer executor with the finetuned version of [BioBERT](https://huggingface.co/gsarti/biobert-nli) available here: [gsarti/biobert-nli](https://huggingface.co/gsarti/biobert-nli).
+This is a minimal implementation of a semantic search engine built on biomedical data from [Reactome](https://reactome.org/). It uses [jina.ai](https://jina.ai/) for MLOps & [Weaviate](https://weaviate.io/) as its vector search engine.  You can find a basic exploration of the biomedical data in [explore.ipynb](notebooks/explore.ipynb). Each document is embedded using a Sentence Transformer executor with the finetuned version of [BioBERT](https://huggingface.co/gsarti/biobert-nli) available here: [gsarti/biobert-nli](https://huggingface.co/gsarti/biobert-nli).
 
 ![Weave-Search Flow](flow.svg)
 
